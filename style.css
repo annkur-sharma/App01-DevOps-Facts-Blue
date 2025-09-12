@@ -1,9 +1,12 @@
 /* General styles */
 body {
-  background: linear-gradient(135deg, #000000, #0a0f29, #001a00);
-  background-size: 400% 400%;
-  animation: neonBackground 15s ease infinite;
-  color: #39ff14; /* Default neon green */
+  background: radial-gradient(circle at center, #0d0d0d, #000000 80%);
+  background-image: 
+    linear-gradient(#1a1a1a 1px, transparent 1px),
+    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 10s linear infinite;
+  color: #7CFC00; /* Softer neon green */
   font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
@@ -12,22 +15,25 @@ body {
   margin: 0;
 }
 
-/* Background animation */
-@keyframes neonBackground {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Animated grid effect */
+@keyframes moveGrid {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 40px 40px, 40px 40px; }
 }
 
-/* Centered container */
+/* Centered container (static size) */
 .container {
   text-align: center;
-  max-width: 800px;
-  padding: 20px;
-  border: 2px solid #39ff14; /* Neon green border */
+  width: 900px;   /* Fixed width */
+  height: 500px;  /* Fixed height */
+  padding: 30px;
+  border: 2px solid #7CFC00; /* Light neon green */
   border-radius: 15px;
-  box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14 inset;
-  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 30px #7CFC00, 0 0 60px #7CFC00 inset;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Title */
@@ -35,13 +41,12 @@ body {
   font-size: 2.5em;
   color: #00f7ff; /* Neon blue */
   text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 /* Info section */
 .info {
   font-size: 1.2em;
-  margin-bottom: 30px;
 }
 
 #datetime {
@@ -57,18 +62,21 @@ body {
 /* Facts section */
 .facts {
   font-size: 1.5em;
-  height: 80px; /* Fixed height so box won’t expand */
-  color: #f4f4f4; /* Neon white */
+  height: 100px; /* Fixed fact box */
+  color: #ffffff; /* Neon white */
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00f7ff;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #7CFC00;
+  border-bottom: 1px solid #7CFC00;
+  margin-top: 20px;
 }
 
 /* Typewriter effect */
 .typewriter {
-  border-right: 2px solid #39ff14;
+  border-right: 2px solid #7CFC00;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
@@ -76,6 +84,6 @@ body {
 }
 
 @keyframes blinkCursor {
-  0%, 50% { border-color: #39ff14; }
+  0%, 50% { border-color: #7CFC00; }
   51%, 100% { border-color: transparent; }
 }
