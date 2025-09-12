@@ -1,7 +1,9 @@
 /* General styles */
 body {
-  background-color: #000000;
-  color: #39ff14; /* Neon green */
+  background: linear-gradient(135deg, #000000, #0a0f29, #001a00);
+  background-size: 400% 400%;
+  animation: neonBackground 15s ease infinite;
+  color: #39ff14; /* Default neon green */
   font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
@@ -10,21 +12,29 @@ body {
   margin: 0;
 }
 
+/* Background animation */
+@keyframes neonBackground {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Centered container */
 .container {
   text-align: center;
   max-width: 800px;
   padding: 20px;
-  border: 2px solid #39ff14;
+  border: 2px solid #39ff14; /* Neon green border */
   border-radius: 15px;
-  box-shadow: 0 0 25px #39ff14;
-  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14 inset;
+  background: rgba(0, 0, 0, 0.75);
 }
 
 /* Title */
 .title {
   font-size: 2.5em;
-  text-shadow: 0 0 15px #39ff14;
+  color: #00f7ff; /* Neon blue */
+  text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff;
   margin-bottom: 20px;
 }
 
@@ -34,10 +44,26 @@ body {
   margin-bottom: 30px;
 }
 
+#datetime {
+  color: #ff073a; /* Neon red */
+  text-shadow: 0 0 10px #ff073a;
+}
+
+#guid {
+  color: #f7ff00; /* Neon yellow */
+  text-shadow: 0 0 10px #f7ff00;
+}
+
 /* Facts section */
 .facts {
   font-size: 1.5em;
-  height: 80px;
+  height: 80px; /* Fixed height so box won’t expand */
+  color: #f4f4f4; /* Neon white */
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #00f7ff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Typewriter effect */

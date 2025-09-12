@@ -17,31 +17,30 @@ const facts = [
   "DevSecOps is about culture, not just tools."
 ];
 
-// Typewriter effect
 let factIndex = 0;
 let charIndex = 0;
-let currentText = "";
 let isDeleting = false;
+let currentText = "";
 const factElement = document.getElementById("fact-text");
 
 function typeWriter() {
-  if (!isDeleting && charIndex <= facts[factIndex].length) {
-    currentText = facts[factIndex].substring(0, charIndex++);
+  const fact = facts[factIndex];
+
+  if (!isDeleting && charIndex <= fact.length) {
+    currentText = fact.substring(0, charIndex++);
     factElement.textContent = currentText;
     setTimeout(typeWriter, 60);
+  } else if (!isDeleting && charIndex > fact.length) {
+    // pause for 10 seconds before deleting
+    setTimeout(() => { isDeleting = true; typeWriter(); }, 10000);
   } else if (isDeleting && charIndex >= 0) {
-    currentText = facts[factIndex].substring(0, charIndex--);
+    currentText = fact.substring(0, charIndex--);
     factElement.textContent = currentText;
     setTimeout(typeWriter, 30);
-  } else {
-    if (!isDeleting) {
-      isDeleting = true;
-      setTimeout(typeWriter, 2000); // pause before deleting
-    } else {
-      isDeleting = false;
-      factIndex = (factIndex + 1) % facts.length;
-      setTimeout(typeWriter, 200);
-    }
+  } else if (isDeleting && charIndex < 0) {
+    isDeleting = false;
+    factIndex = (factIndex + 1) % facts.length;
+    setTimeout(typeWriter, 200);
   }
 }
 
