@@ -1,0 +1,1 @@
+run command on VM -- uuidgen | sudo tee /var/www/html/guid.txt

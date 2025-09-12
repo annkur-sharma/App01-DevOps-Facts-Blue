@@ -1,0 +1,55 @@
+/* General styles */
+body {
+  background-color: #000000;
+  color: #39ff14; /* Neon green */
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Centered container */
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  border: 2px solid #39ff14;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #39ff14;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Title */
+.title {
+  font-size: 2.5em;
+  text-shadow: 0 0 15px #39ff14;
+  margin-bottom: 20px;
+}
+
+/* Info section */
+.info {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Facts section */
+.facts {
+  font-size: 1.5em;
+  height: 80px;
+}
+
+/* Typewriter effect */
+.typewriter {
+  border-right: 2px solid #39ff14;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 50% { border-color: #39ff14; }
+  51%, 100% { border-color: transparent; }
+}
