@@ -1,24 +1,26 @@
 /* General styles */
 body {
-  background: radial-gradient(circle at center, #0d0d0d, #000000 80%);
-  background-image: 
-    linear-gradient(#1a1a1a 1px, transparent 1px),
-    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: moveGrid 10s linear infinite;
-  color: #7CFC00; /* Softer neon green */
+  background: #000000;
   font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
 }
 
-/* Animated grid effect */
-@keyframes moveGrid {
-  0%   { background-position: 0 0, 0 0; }
-  100% { background-position: 40px 40px, 40px 40px; }
+/* Matrix canvas background */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #000;
 }
 
 /* Centered container (static size) */
@@ -27,9 +29,9 @@ body {
   width: 900px;   /* Fixed width */
   height: 500px;  /* Fixed height */
   padding: 30px;
-  border: 2px solid #7CFC00; /* Light neon green */
+  border: 2px solid #ffffff; /* Neon white */
   border-radius: 15px;
-  box-shadow: 0 0 30px #7CFC00, 0 0 60px #7CFC00 inset;
+  box-shadow: 0 0 30px #ffffff, 0 0 60px #ffffff inset;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
   flex-direction: column;
@@ -63,20 +65,20 @@ body {
 .facts {
   font-size: 1.5em;
   height: 100px; /* Fixed fact box */
-  color: #ffffff; /* Neon white */
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #00f7ff;
+  color: #39ff14; /* Neon green */
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #7CFC00;
-  border-bottom: 1px solid #7CFC00;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   margin-top: 20px;
 }
 
 /* Typewriter effect */
 .typewriter {
-  border-right: 2px solid #7CFC00;
+  border-right: 2px solid #39ff14;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
@@ -84,6 +86,6 @@ body {
 }
 
 @keyframes blinkCursor {
-  0%, 50% { border-color: #7CFC00; }
+  0%, 50% { border-color: #39ff14; }
   51%, 100% { border-color: transparent; }
 }
