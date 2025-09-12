@@ -36,8 +36,8 @@ uuidgen | sudo tee /var/www/html/guid.txt
 ```
 
 ### Visit your site via public IP or any domain pointing to the server.
-- Example: http://<public-ip>
-- Example: http://<public-domain>
+- Example: *http://public-ip*
+- Example: *http://public-domain*
 
 ---
 
