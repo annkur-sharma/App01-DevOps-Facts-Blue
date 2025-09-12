@@ -17,25 +17,27 @@ The website is purely static and can be deployed via git clone + cp -r. No addit
 
 # Deployment
 
-## Clone the repository
+### Clone the repository
 ``` bash
 git clone https://github.com/annkur-sharma/AppCode01-DevSecOps-Facts.git
 ```
 
-## Copy files to your web server root (example for Nginx /var/www/html):
+### Copy files to your web server root (example for Nginx /var/www/html):
 ``` bash
 sudo rm -r /var/www/html/*
+```
+``` bash
 sudo cp -r AppCode01-DevSecOps-Facts/* /var/www/html/
 ```
 
-## Generate a unique GUID for this VM (optional but recommended):
+### Generate a unique GUID for this VM (optional but recommended):
 ``` bash
 uuidgen | sudo tee /var/www/html/guid.txt
 ```
 
-## Visit your site via public IP or any domain pointing to the server.
-*Example: http://<public-ip>*
-*Example: http://<public-domain>*
+### Visit your site via public IP or any domain pointing to the server.
+- *Example: http://<public-ip>*
+- *Example: http://<public-domain>*
 
 ---
 
