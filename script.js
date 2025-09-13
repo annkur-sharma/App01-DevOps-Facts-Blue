@@ -90,10 +90,10 @@ updateDateTime();
 fetch("guid.txt")
   .then(response => response.text())
   .then(guid => {
-    document.getElementById("guid").textContent = "Session ID: " + guid.trim();
+    document.getElementById("guid").textContent = "GUID: " + guid.trim();
   })
   .catch(() => {
-    document.getElementById("guid").textContent = "Session ID: unavailable";
+    document.getElementById("guid").textContent = "GUID: unavailable";
   });
 
 // Start typewriter
