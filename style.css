@@ -42,7 +42,7 @@ body {
 .title {
   font-size: 2.5em;
   color: #1100ff; /* Neon blue */
-  text-shadow: 0 0 15px #10a7ff, 0 0 15px #0077ff;
+  text-shadow: 0 0 20px #10a7ff, 0 0 20px #0077ff;
   margin: 0;
 }
 
@@ -52,18 +52,18 @@ body {
 }
 
 #datetime {
-  color: #ff073a; /* Neon red */
-  text-shadow: 0 0 10px #ca0028;
+  color: #ca0028; /* Neon red */
+  text-shadow: 0 0 20px #ca0028;
 }
 
 #guid {
   color: #f7ff00; /* Neon yellow */
-  text-shadow: 0 0 10px #f7ff00;
+  text-shadow: 0 0 20px #f7ff00;
 }
 
 #appversion {
   color: #ffffff; /* Neon yellow */
-  text-shadow: 0 0 10px #002fff;
+  text-shadow: 0 0 20px #002fff;
 }
 
 /* Facts section */
