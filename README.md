@@ -19,7 +19,7 @@ The website is purely static and can be deployed via git clone + cp -r. No addit
 
 ### Clone the repository
 ``` bash
-git clone https://github.com/annkur-sharma/AppCode01-DevSecOps-Facts.git
+git clone https://github.com/annkur-sharma/App01-DevOps-Facts-Blue.git
 ```
 
 ### Copy files to your web server root (example for Nginx /var/www/html):
@@ -27,7 +27,7 @@ git clone https://github.com/annkur-sharma/AppCode01-DevSecOps-Facts.git
 sudo rm -r /var/www/html/*
 ```
 ``` bash
-sudo cp -r AppCode01-DevSecOps-Facts/* /var/www/html/
+sudo cp -r App01-DevOps-Facts-Blue/* /var/www/html/
 ```
 
 ### Generate a unique GUID for this VM (optional but recommended):
