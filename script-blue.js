@@ -87,7 +87,7 @@ setInterval(updateDateTime, 1000);
 updateDateTime();
 
 // Load GUID
-fetch("guid.txt")
+fetch("guid-blue.txt")
   .then(response => response.text())
   .then(guid => {
     document.getElementById("guid").textContent = "GUID: " + guid.trim();
