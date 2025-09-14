@@ -15,7 +15,7 @@ function drawMatrix() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // ctx.fillStyle = "#39ff14"; // Neon green
-  ctx.fillStyle = "#0099ffff"; // Neon blue
+  ctx.fillStyle = "#0048ffff"; // Neon blue
   ctx.font = fontSize + "px monospace";
 
   for (let i = 0; i < drops.length; i++) {
