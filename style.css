@@ -41,8 +41,8 @@ body {
 /* Title */
 .title {
   font-size: 2.5em;
-  color: #1100ff; /* Neon blue */
-  text-shadow: 0 0 20px #10a7ff, 0 0 20px #0077ff;
+  color: #1a7cfc; /* Neon blue */
+  text-shadow: 0 0 20px #52befd, 0 0 20px #479dff;
   margin: 0;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 #appversion {
-  color: #0d00fc; /* Neon blue */
+  color: #0065fc; /* Neon blue */
   text-shadow: 0 0 20px #ffffff;
 }
 
